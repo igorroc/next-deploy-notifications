@@ -44,7 +44,7 @@ let useHasNewDeploy: UseHasNewDeploy = (options = {}) => {
   let endpoint = options.endpoint ?? "/api/has-new-deploy";
   let isUnknown = currentVersion === "unknown";
 
-  let loopInterval = interval < 3_000 ? interval : 3_000;
+  let loopInterval = interval > 3_000 ? interval : 3_000;
   let loopOrNotInterval = !hasNewDeploy && windowFocused ? loopInterval : null;
 
   useInterval(async () => {
