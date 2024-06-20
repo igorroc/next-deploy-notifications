@@ -31,7 +31,7 @@ type UseHasNewDeploy = (options?: HookOptions) => HookValues;
 let useHasNewDeploy: UseHasNewDeploy = (options = {}) => {
   let debug = (message: string) => {
     if (options.debug) {
-      console.log(...["[Deploy notifications] ", message]);
+      console.log("[Deploy notifications] ", message);
     }
   };
 
