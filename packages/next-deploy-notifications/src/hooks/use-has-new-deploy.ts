@@ -4,7 +4,7 @@ import useWindowFocus from "use-window-focus";
 
 let getCurrentVersion = async (endpoint: string) => {
   let response = await fetch(endpoint);
-  if (response.status > 400) {
+  if (response.status >= 400) {
     console.error(
       "[next-deploy-notifications] Could not find current app version. Did you setup the API route?"
     );
